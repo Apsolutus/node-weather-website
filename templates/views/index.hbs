@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Weather</title>
+  <link rel="icon" href="/img/weather.png">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <div class="main-content" id="main">
+    {{>header}}
+    <p>Use this site to get your weather!</p>
+    <form action="search">
+      <input type="text" placeholder="Location" onfocus="this.select();" onmouseup="return false;">
+      <button type="submit">Search</button>
+    </form>
+    <h4 id="msg-1"></h4>
+    <p id="msg-2"></p>
+
+  </div>
+  {{>footer}}
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
