@@ -1,12 +1,10 @@
-console.log('Client side js file is loaded!')
-
 const getWeather = (location) => {
   const messageOne = document.getElementById('msg-1')
   const messageTwo = document.getElementById('msg-2')
   messageOne.textContent = 'Loading...'
   messageTwo.textContent = ''
 
-  fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+  fetch(`/weather?address=${location}`).then((response) => {
     response.json().then(({ error, location, forecast }) => {
       if (error) {
         messageOne.textContent = error
